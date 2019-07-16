@@ -1,0 +1,126 @@
+<html>
+<head>
+    <meta name=viewport content="view=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="AppScript.js"></script>
+
+
+    <link rel="stylesheet" href="app.css" />
+</head>
+    <body dir="rtl">
+        <!-- login page -->
+        <div data-role="page" id="login">
+                <div data-role="header"><h1>NOY'S NAILS</h1></div>
+                <div data-role="content" id="page1content">
+                    <h2>התחברות</h2><br>
+                    <label id="wrong"><br></label>
+                    <label >שם:</label>
+                    <input type="text" name="username" id="username" size="2"><br><br>
+                    <label >סיסמא:</label>
+                    <input type="password" name="password" id="password" size="35"><br><br><br>
+                    <input type="submit" id="loginsubmit" value="כניסה">
+                    <label>אין לך משתמש? <a href="#regpage">הרשמה</a></label>
+                </div>
+                <div data-role="footer" data-position="fixed" style="text-align: center;">  מכרז מסחרי אריאל</div>
+            </div>
+            <!-- register page -->
+        <div data-role="page" id="regpage">
+            <div data-role="header">
+                    <a href="#login" data-role="button" data-icon="arrow-l" data-direction="reverse" data-transition="fade" data-iconpos="notext" class="ui-btn-left"></a>
+                <h1>NOY'S NAILS</h1></div>
+            <div data-role="content" id="page1content">
+                <h2>מלאו את הפרטים הבאים :</h2><br>
+                <label id="inuse"><br></label>
+                <label >שם פרטי:</label>
+                <input type="text" name="fnamereg" id="fnamereg" size="2"><br>
+                <label >שם משפחה:</label>
+                <input type="text" name="lnamereg" id="lnamereg" size="2"><br>
+                <label >שם משתמש:</label>
+                <input type="text" name="usernamereg" id="usernamereg" size="2"><br>
+                <label >סיסמא:</label>
+                <input type="password" name="passwordreg" id="passwordreg" size="35"><br><br>
+                <input type="submit" id="registersubmit" value="הרשמה">
+            </div>
+            <div data-role="footer" data-position="fixed" style="text-align: center;">  מכרז מסחרי אריאל</div>
+        </div>
+        <!-- Home page -->
+        <div data-role="page" id="home">
+                <div data-role="header"><h1>NOY'S NAILS</h1></div>
+                <div data-role="content">
+                    <label id="lblGreet"></label>
+                    <label id="checkIn"><br></label><br><br><br><br>
+                    <a href="#booking" class="ui-btn ui-icon-calendar ui-btn-icon-right">תורים</a>
+                    <a href="#sale" class="ui-btn ui-icon-star ui-btn-icon-right">מבצעים</a>
+                    <a href="#about" class="ui-btn ui-icon-info ui-btn-icon-right">עלינו</a>
+                    <a href="tel:+972548050499" class="ui-btn ui-icon-phone ui-btn-icon-right">התקשרו!</a>
+                </div>
+                <div data-role="footer" data-position="fixed" style="text-align: center;">  מכרז מסחרי אריאל</div>
+            </div>
+        <!-- about page -->
+            <div data-role="page" id="about">
+                    <div data-role="header">
+                        <a href="#home" data-role="button" data-icon="home" data-direction="reverse" data-transition="fade" data-iconpos="notext" class="ui-btn-right"></a>
+                        <h1>NOY'S NAILS</h1></div>
+                    <div data-role="content">
+                        <label id="lblInfo">עלינו</label>
+                    </div>
+                    <div data-role="footer" data-position="fixed" style="text-align: center;">  מכרז מסחרי אריאל</div>
+            </div>
+        <!-- sales page -->
+            <div data-role="page" id="sale">
+                    <div data-role="header">
+                            <a href="#home" data-role="button" data-icon="home" data-direction="reverse" data-transition="fade" data-iconpos="notext" class="ui-btn-right"></a>
+                        <h1>NOY'S NAILS</h1></div>
+                    <div data-role="content">
+                        <label id="lblInfo">מבצעים</label>
+                    </div>
+                    <div data-role="footer" data-position="fixed" style="text-align: center;">  מכרז מסחרי אריאל</div>
+            </div>
+            <!-- booking page -->
+            <div data-role="page" id="booking">
+                    <div data-role="header">
+                        <a href="#home" data-role="button" data-icon="home" data-direction="reverse" data-transition="fade" data-iconpos="notext" class="ui-btn-right"></a>
+                        <h1>NOY'S NAILS</h1></div>
+                    <div data-role="content">
+                        <label id="lblGreet">קביעת תורים</label>
+                        <label id="dateError"></label><br><br>
+                        <p>תאריך:</p>
+                        <input type="date" id="datepick" data-role="datepicker" data-inline="true" >
+                        <div class="ui-field-contain">
+                                <label for="select-native-1">טיפול:</label>
+                                <select name="select-native-1" id="select-native-1">
+                                    <option value="1">מניקור</option>
+                                    <option value="2">פדיקור</option>
+                                    <option value="4">פדיקור + מניקור</option>
+                                </select>
+                        </div>
+                        <p>שעה:</p>
+                        <select id="hourtime">
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                        </select>
+                        <br><br><br><br><br>
+                        <a href="#popupDia" id="btnToOrder" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-a">הרשמה</a>
+                        <div data-role="popup" id="popupDia" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                            <div role="main" class="ui-content">
+                                <h3 class="ui-title">האם לקבוע את התור?</h3>
+                            <p>תוכל\י לבטל את התור עד 24 שעות לפני המועד.</p>
+                                <a id="cancelorder" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" >ביטול</a>
+                                <a id="confirmorder" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">אישור</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-role="footer" data-position-to="window" style="text-align: center;">  מכרז מסחרי אריאל</div>
+            </div>
+    </body>
+</html>
